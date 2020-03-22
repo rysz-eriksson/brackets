@@ -1,10 +1,5 @@
-// module.exports = function check(str, bracketsConfig) {
-//   // your solution
-// }
-
-
-function check(str, bracketsConfig) {
-    let value = false
+module.exports = function check(str, bracketsConfig) {
+  let value = false
     const strArray = str.split('')
     let checkArray = []
     for (let i=0; i < bracketsConfig.length; i++) {
@@ -39,18 +34,7 @@ function check(str, bracketsConfig) {
       value = false
     }
     return value
-  }
+}
 
-console.log(check('()', [['(', ')']])) // -> true
-console.log(check('((()))()', [['(', ')']])) // -> true
-console.log(check('())(', [['(', ')']])) // -> false
-console.log(check('([{}])', [['(', ')'], ['[', ']'], ['{', '}']])) // -> true
-console.log(check('[(])', [['(', ')'], ['[', ']']])) // -> false
-console.log(check('[]()', [['(', ')'], ['[', ']']])) // -> true
-console.log(check('[]()(', [['(', ')'], ['[', ']']])) // -> false
-console.log(check('||', [['|', '|']])) // -> true
-console.log(check('[]()', [['(', ')'], ['[', ']']])) // -> true
 
-console.log(check('|()|', [['(', ')'], ['|', '|']])) // -> true
-console.log(check('|(|)', [['(', ')'], ['|', '|']])) // -> false
-console.log(check('|()|(||)||', [['(', ')'], ['|', '|']])) // -> true
+
